@@ -3,22 +3,24 @@ import { FaRegUserCircle } from 'react-icons/fa'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { AuthContext } from '../../AuthProvider/AuthProvider'
 import { MdLogout } from 'react-icons/md';
 import { FaBarsStaggered } from 'react-icons/fa6';
 import { IoMdClose } from 'react-icons/io';
+import { AuthContext } from '../Context/AuthContext/AuthProvider';
 
 export default function Navbar() {
-//    const { user, singOut } = useContext(AuthContext)
+   const { user, SignOutUser } = useContext(AuthContext)
+   console.log(user);
+   
 //    const [show, setShow] = useState(false);
 
    const Navigate = useNavigate();
   
-//    const handleSignOut = ()=>{
-//     singOut()
-//      toast.warning("Logged Out Successfully!")
-//      Navigate('/')
-//    }
+   const handleSignOut = ()=>{
+    SignOutUser()
+     toast.warning("Logged Out Successfully!")
+     Navigate('/')
+   }
 
    /// showing the responsive navbar section functionality satat here now***********************
    /// showing the responsive navbar section functionality satat here now***********************
@@ -75,7 +77,7 @@ export default function Navbar() {
                 </div>
               {/* {user && user.email? <img className=' w-10 h-10 rounded-full' src={user.photoURL} alt="" /> : <img src={profileLogo} alt="" />}  */}
             </div>
-            {/* {
+            {
               user?
               <button onClick={handleSignOut} className=' btn btn-error cursor-pointer'><MdLogout />Log-Out</button>
               :
@@ -83,9 +85,9 @@ export default function Navbar() {
                  <div><Link to="/login" className=' btn btn-accent cursor-pointer'>Login</Link></div>
                  <div><Link to="/register" className=' btn btn-success cursor-pointer text-white'>Register</Link></div>
                  </div>
-                 } */}
-                 <div><Link to="/login" className=' btn btn-accent cursor-pointer'>Login</Link></div>
-                 <div><Link to="/register" className=' btn btn-success cursor-pointer text-white'>Register</Link></div>
+                 }
+                 {/* <div><Link to="/login" className=' btn btn-accent cursor-pointer'>Login</Link></div>
+                 <div><Link to="/register" className=' btn btn-success cursor-pointer text-white'>Register</Link></div> */}
         </div>
       </nav>
     </>
