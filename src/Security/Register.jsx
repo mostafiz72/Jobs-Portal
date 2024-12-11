@@ -49,7 +49,7 @@ export default function Login() {
         <ToastContainer position="top-center" />
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left md:w-3/6">
+                    <div className="text-center lg:text-left md:w-4/12">
                         <Lottie animationData={RegisterLottile}></Lottie>
                     </div>
                     <div className=" bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">

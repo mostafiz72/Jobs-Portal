@@ -10,7 +10,6 @@ import { AuthContext } from '../Context/AuthContext/AuthProvider';
 
 export default function Navbar() {
    const { user, SignOutUser } = useContext(AuthContext)
-   console.log(user);
    
 //    const [show, setShow] = useState(false);
 
@@ -59,7 +58,7 @@ export default function Navbar() {
 
           <nav className=' flex justify-between items-center text-lg font-semibold w-11/12 md:container mx-auto py-5'>
         {/* <button onClick={handleShow} className=' font-bold text-2xl cursor-pointer md:hidden'><FaBarsStaggered /></button>  */}
-        <Link to="/" className=' font-bold text-xl md:text-2xl cursor-pointer hidden md:block'>Jobs-Portal</Link> 
+        <Link to="/" className=' lg:flex justify-center items-center gap-3 font-bold text-xl md:text-2xl cursor-pointer hidden md:block'><img className=' w-10' src="https://img.icons8.com/?size=80&id=13dQN8gCu60R&format=png" alt="" /> Jobs-Portal</Link> 
         {/* ekhane bola hoyse jodi user er mordhe kicu thake ta hole tumi amake tar nam ta show koro na hole error deyo na */}
         <div className=' hidden lg:block'>
             <ul className=' flex items-center gap-5'>
