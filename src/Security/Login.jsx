@@ -7,6 +7,7 @@ import LoginLottile from '../assets/Lotti/Login.json'
 import { AuthContext } from '../Context/AuthContext/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoginGoogle from '../GoogleLogin/LoginGoogle';
 
 export default function Login() {
 
@@ -76,6 +77,7 @@ export default function Login() {
                                 <div className="form-control flex flex-col justify-center w-full">
                                     <p className=' text-right mb-3 font-semibold'>Don't Have An Account ? <Link to="/register" className="text-red-500 hover:underline">Register</Link></p>
                                     <button className="btn btn-primary">Login</button>
+                                    <LoginGoogle />
                                     {/* <span className=' text-xl my-3 text-center'>or</span> */}
                                     {/* <button onClick={handleLoginWithGoogle} className=' btn btn-accent'> <span className=' text-yellow-400 text-lg'><FaGoogle /></span> Login Wtih Google</button> */}
                                 </div>

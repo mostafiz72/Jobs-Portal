@@ -5,9 +5,9 @@ export default function Banner() {
     return (
         <>
             <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content flex-col gap-50 lg:flex-row-reverse">
+                <div className=" flex justify-between w-full container mx-auto flex-col lg:flex-row-reverse">
                     <motion.img
-                        animate={{ x: [-150, -120, -150] }}
+                        animate={{ x: [-180, -150, -180] }}
                         transition={{ duration: 5, repeat: Infinity }}
                         src="https://img.freepik.com/free-photo/team-working-animation-project_23-2149269903.jpg?t=st=1733956828~exp=1733960428~hmac=0c3745afeddf727d26beac7b62d35a25197d0a78da3496afad10626fc5ca3990&w=740"
                         className="max-w-sm border-l-8 z-50 border-b-8 rounded-t-3xl rounded-br-3xl border-red-600 shadow-2xl" />
