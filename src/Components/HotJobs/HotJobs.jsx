@@ -12,7 +12,7 @@ export default function HotJobs() {
     }, [])
 
   return (
-    <div>
+    <div className=' grid grid-cols-4 gap-5 container mx-auto'>
         {
             jobs.map(job => <HotJobsCard key={job._id} job={job} />
             )
