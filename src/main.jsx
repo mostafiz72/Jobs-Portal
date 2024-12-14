@@ -4,8 +4,8 @@ import './index.css'
 import {
   RouterProvider,
 } from "react-router-dom";
-import router from './Router/router';
-import AuthProvider from './Context/AuthContext/AuthProvider';
+import router from './Components/Router/router';
+import AuthProvider from './Components/Context/AuthContext/AuthProvider';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

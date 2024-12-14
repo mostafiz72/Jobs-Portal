@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { FaGoogle } from 'react-icons/fa';
 import { IoMdClose, IoMdEye, IoMdEyeOff } from 'react-icons/io'
 import { Link, useNavigate } from 'react-router-dom'
-import LoginLottile from '../assets/Lotti/Login.json'
+import LoginLottile from '../../assets/Lotti/Login.json'
 import { AuthContext } from '../Context/AuthContext/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

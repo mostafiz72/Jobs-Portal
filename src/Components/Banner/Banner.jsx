@@ -4,7 +4,7 @@ import { color, motion } from "motion/react"
 export default function Banner() {
     return (
         <>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-200 pb-40 pt-80">
                 <div className=" flex justify-between w-full container mx-auto flex-col lg:flex-row-reverse">
                     <motion.img
                         animate={{ x: [-180, -150, -180] }}
