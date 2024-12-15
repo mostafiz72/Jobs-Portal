@@ -27,7 +27,7 @@ import MyApplications from "../MyApplication/MyApplications";
           loader: ({params})=> fetch(`http://localhost:5000/jobs/${params.id}`) 
           },
           {
-            path: "my-application",
+            path: "/myApplication",
             element: <PrivateRoute><MyApplications></MyApplications></PrivateRoute>
           }
       ],

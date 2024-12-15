@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContext/AuthProvider';
 import Swal from 'sweetalert2';
 
 export default function JobApply() {
-    
+    const Navigate = useNavigate();
     const { _id } = useLoaderData();
     const { user } = useContext(AuthContext);
     console.log(_id, user);
@@ -42,6 +42,7 @@ export default function JobApply() {
                     'Your application has been sent successfully.',
                    'success'
                 )
+                Navigate('/myApplication');
             }
         })
         .catch(error => console.error('Error:', error))
