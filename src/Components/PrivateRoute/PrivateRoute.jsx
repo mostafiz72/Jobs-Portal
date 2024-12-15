@@ -9,7 +9,6 @@ export default function PrivateRoute({ children }) {
     if(loading){
         return <div>Loading...</div>;
     }
-console.log(user, loading);
 
     if( user ){
         return children;

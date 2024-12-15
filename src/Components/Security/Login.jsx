@@ -14,7 +14,6 @@ export default function Login() {
     const Navigate = useNavigate();
     const location = useLocation();
     const from = location.state || "/";
-    console.log(location);
     
 
     const { SignInUser, setUser } = useContext(AuthContext)

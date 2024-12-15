@@ -22,7 +22,7 @@ export default function HotJobsCard({ job }) {
                     <p>{description}</p>
                     <div className=' flex gap-2 flex-wrap text-center my-5'>
                         {
-                           requirements.map(requirement =><p className=' rounded-full bg-gray-700 text-white p-1'>{requirement}</p>)
+                           requirements.map((requirement, index) =><p key={index} className=' rounded-full bg-gray-700 text-white p-1'>{requirement}</p>)
                         }
                     </div>
                     <div className="card-actions justify-end items-center">
