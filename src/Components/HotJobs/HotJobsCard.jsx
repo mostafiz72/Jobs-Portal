@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function HotJobsCard({ job }) {
-    const { title, location, jobType, category, applicationDeadline, salaryRange, description, company_logo, requirements, currency } = job;
+    const { _id, title, location, jobType, category, applicationDeadline, salaryRange, description, company_logo, requirements, currency } = job;
     return (
         <>
             <div className="card bg-base-100 shadow-xl">
@@ -26,7 +27,7 @@ export default function HotJobsCard({ job }) {
                     </div>
                     <div className="card-actions justify-end items-center">
                         <p>Salary: {salaryRange.min}-{salaryRange.max} { salaryRange.currency}</p>
-                        <button className="btn btn-primary">Apply Now</button>
+                        <Link to={`jobs/${_id}`} className="btn btn-primary">View Jobs</Link>
                     </div>
                 </div>
             </div>

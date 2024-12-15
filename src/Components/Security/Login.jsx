@@ -2,7 +2,7 @@ import Lottie from 'lottie-react';
 import React, { useContext, useState } from 'react'
 import { FaGoogle } from 'react-icons/fa';
 import { IoMdClose, IoMdEye, IoMdEyeOff } from 'react-icons/io'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import LoginLottile from '../../assets/Lotti/Login.json'
 import { AuthContext } from '../Context/AuthContext/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,6 +12,10 @@ import LoginGoogle from '../GoogleLogin/LoginGoogle';
 export default function Login() {
 
     const Navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state || "/";
+    console.log(location);
+    
 
     const { SignInUser, setUser } = useContext(AuthContext)
     const [show, setShow] = useState(false);
@@ -30,13 +34,10 @@ export default function Login() {
 
         SignInUser(email, password)
         .then(result =>{
-            console.log(result.user);
             setUser(result.user);
-            toast.success("Login Success")
-            
-            // Navigate(location?.state ? location.state : "/")
+            toast.success("Login Success");
             setTimeout(()=>{
-                Navigate("/")
+                Navigate(from);
             }, 3000)
         })
         .catch(error =>{
