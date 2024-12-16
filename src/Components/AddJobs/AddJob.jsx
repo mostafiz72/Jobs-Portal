@@ -216,7 +216,7 @@ export default function AddJob() {
                             type="submit"
                             className="bg-blue-500 w-full text-white rounded-md py-2 px-4 hover:bg-blue-600"
                         >
-                            Submit
+                            Post Job
                         </button>
                     </div>
                 </form>

@@ -63,9 +63,9 @@ export default function Navbar() {
         <div className=' hidden lg:block'>
             <ul className=' flex items-center gap-5'>
                 <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/camping">About</NavLink></li>
                 <li><NavLink to="/myApplication">My Applications</NavLink></li>
                 <li><NavLink to="/addJob">Post Jobs</NavLink></li>
+                <li><NavLink to="/mypost">My Post</NavLink></li>
                 <li><NavLink to="/bungeejumping">Contact</NavLink></li>
                 {/* {user && user.email? <li><NavLink to="/Profile">Profile</NavLink></li> : ""}
                 {user && user.email? <li><NavLink to="/updata">Updata Profile</NavLink></li> : ""} */}
