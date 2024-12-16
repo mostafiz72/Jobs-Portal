@@ -9,6 +9,7 @@ export default function HotJobsCard({ job }) {
                 <div className=' flex gap-5'>
                     <figure>
                         <img
+                            className=' w-20 h-20 object-cover'
                             src={company_logo}
                             alt="Shoes" />
                     </figure>

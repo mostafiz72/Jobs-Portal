@@ -65,7 +65,7 @@ export default function Navbar() {
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/camping">About</NavLink></li>
                 <li><NavLink to="/myApplication">My Applications</NavLink></li>
-                <li><NavLink to="/addJob">Add Jobs</NavLink></li>
+                <li><NavLink to="/addJob">Post Jobs</NavLink></li>
                 <li><NavLink to="/bungeejumping">Contact</NavLink></li>
                 {/* {user && user.email? <li><NavLink to="/Profile">Profile</NavLink></li> : ""}
                 {user && user.email? <li><NavLink to="/updata">Updata Profile</NavLink></li> : ""} */}
