@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../Context/AuthContext/AuthProvider';
+import { Link } from 'react-router-dom';
 
 export default function MyPost() {
     const [jobs, setJobs] = useState([]);
@@ -22,6 +23,7 @@ export default function MyPost() {
                             <th>Job Title</th>
                             <th>Location</th>
                             <th>Total Bids: </th>
+                            <th>View Applications: </th>
                         </tr>
                     </thead>
                     {
@@ -35,6 +37,7 @@ export default function MyPost() {
                                     <td>{job.title}</td>
                                     <td>{job.location}</td>
                                     <td>{job.applicationCount ? job.applicationCount : 0}</td>
+                                    <td><Link to={`/viewApplications/${job._id}`} className=' btn btn-outline'>View Applications</Link></td>
                                 </tr>
                             </tbody>
                         )
