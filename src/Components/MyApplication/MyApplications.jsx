@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../Context/AuthContext/AuthProvider'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function MyApplications() {
 
@@ -10,9 +11,14 @@ export default function MyApplications() {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/apply?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setJobs(data))
+        // fetch(`http://localhost:5000/apply?email=${user.email}`)
+        //     .then(res => res.json())
+        //     .then(data => setJobs(data))
+
+        axios.get(`http://localhost:5000/apply?email=${user.email}`, /// axios use korle amader duibar then korte hoy na and method headers asob kono kicu dite hoy nah
+        {withCredentials: true})
+        .then(res => setJobs(res.data)
+        )
     }, [user.email])  // email jodi change hoy tahole useEffect abaar call hobe
 
     // delete application functionality starting

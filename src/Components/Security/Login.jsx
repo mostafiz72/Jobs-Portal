@@ -8,6 +8,7 @@ import { AuthContext } from '../Context/AuthContext/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoginGoogle from '../GoogleLogin/LoginGoogle';
+import axios from 'axios';
 
 export default function Login() {
 
@@ -33,11 +34,21 @@ export default function Login() {
 
         SignInUser(email, password)
         .then(result =>{
-            setUser(result.user);
+            // setUser(result.user);
             toast.success("Login Success");
-            setTimeout(()=>{
-                Navigate(from);
-            }, 3000)
+            /// if jodin user sunnces then create jsob web tokens-----------
+              const users = { email: email };
+             axios.post("http://localhost:5000/jwt", users, {
+                withCredentials: true  // ai j qequest ta jassche Cookize a sei tumi allow kore dau and cookie te save korar permition dei /// ami backend er kono kicu pathonor permition dei.
+             })
+             .then(res=>{
+                console.log(res.data);
+                
+             })
+
+            // setTimeout(()=>{
+            //     Navigate(from);
+            // }, 3000)
         })
         .catch(error =>{
             toast.error("Something went wrong " + error.message)
